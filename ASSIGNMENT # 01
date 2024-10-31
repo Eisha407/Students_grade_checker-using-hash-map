@@ -1,9 +1,12 @@
 
 EXERCISE 1.1
+
 QUESTION : # 01
+
 Q1.Describe your own real world example that requires sorting. Describe one that 
 Requires finding the shortest distance between two points
 ANSWER:
+
 Example Requiring Sorting
 
 Event Planning: When organizing a large conference with multiple sessions, attendees, and speakers, sorting is essential for efficiency. Suppose you're in charge of creating the event schedule. You need to sort the list of sessions by time to ensure there's no overlap and that attendees can move seamlessly from one session to another. You might also need to sort speakers by their session times to provide clear instructions and manage logistics effectively.
@@ -13,8 +16,10 @@ Example Requiring Finding the Shortest Distance
 Delivery Routing: A logistics company needs to find the shortest route for its delivery trucks. For instance, if a delivery truck must visit several locations in a city, finding the shortest path that covers all delivery points is crucial to minimize fuel consumption and delivery time. This problem can be solved using algorithms like Dijkstra's or the Traveling Salesman Problem (TSP) solver to determine the most efficient route.
 
 QUESTION : # 02
+
 Q2.other than speed ,what other meaures of efficiency might you need to consider in a real-world settings?
 ANSWER:
+
 In a real-world setting, other than speed, several measures of efficiency might need to be considered:
 
 1. Resource Utilization: Efficient use of resources such as materials, energy, and human labor. For example, minimizing waste and optimizing the use of raw materials in manufacturing processes.
@@ -39,9 +44,12 @@ In a real-world setting, other than speed, several measures of efficiency might 
 
 
 8. Compliance and Safety: Adhering to regulatory requirements and ensuring the safety of employees and customers. Efficient processes must also ensure compliance with laws and standards.
+
 QUESTION : # 03
+
 Q3.select a data structure  that you have seen,and discuss  its strength and limitations.
 ANSWER:
+
 Data Structure: Hash Table
 
 Strengths:
@@ -74,9 +82,12 @@ Limitations:
 
 
 5. Difficulty in Range Queries: Hash tables are not well-suited for operations that require range queries (e.g., finding all elements within a specific range), as they lack inherent order among keys.
+
 QUESTION : # 04
+
 Q4.how are the shortest-path and travelling-salesperson problems given above similar?how are they different.
 ANSWER:
+
 The Shortest Path Problem and the Traveling Salesperson Problem (TSP) are both fundamental problems in graph theory and optimization, but they have different objectives and constraints.
 
 Similarities:
@@ -124,9 +135,12 @@ Traveling Salesperson Problem: Common in logistics and planning, where the goal 
 
 
 Understanding these differences and similarities can help in choosing the right approach and algorithms for solving specific problems in real-world scenarios.
+
 QUESTION : # 05
+
 Q5.suggest a real-world problem in which  only the best solution will do .then come up with one in which “approximately” the best solution is good enough.
 ANSWER:
+
 Real-World Problem Requiring the Best Solution
 
 Air Traffic Control Routing
@@ -233,7 +247,9 @@ Example Workflow
 
 
 6. Evaluation and Feedback: The system evaluates the recommendations using metrics like precision, recall, and F1-score, and incorporates user feedback to continuously improve the models.
+
 QUESTION : # 02
+
 Q2.suppose that for inputs of size n on a particular computer ,insertion sort runs in 8^(n^2 ) steps and merge sort runs in 64nlogn steps.for which value of n does insertion sort beat merge sort?
 ANSWER:
 We are given:
@@ -308,7 +324,9 @@ Thus, the smallest value of  n  such that 100n^2  runs faster than 2^n  is 15.
 
 
 EXERCISE 2.1
+
 QUESTION : # 01
+
 Q1. Using Figure 2.2 as a model, illustrate the operation of  INSERTION-SORT on an array initially containing the sequence [31,41, 59, 26, 41, 58].  
 ANSWER:
 
@@ -370,6 +388,7 @@ This is the result after the insertion sort algorithm has been applied to the or
 
 
 QUESTION : # 02
+
 Q2.Consider the procedure SUM-ARRAY on the facing page. It computes the sum of the n numbers in array A[1 : n]. State a loop invariant for this procedure, and use its initialization, maintenance, and termination properties to show that the SUMARRAY procedure returns the sum of the numbers in A[1 : n].
 
 ANSWER:
@@ -396,7 +415,9 @@ Algorithm 1 Non-increasing Insertion-Sort(A) :
 
 10: end for
 
+
 QUESTION : # 03
+
 Q3.Rewrite the  INSERTION-SORT procedure to sort into monotonically decreasing  instead of monotonically increasing order. 
 
 ANSWER:
@@ -489,6 +510,7 @@ This is the result of sorting the array [31, 41, 59, 26, 41, 58] in monotonicall
 
 
 QUESTION : # 04
+
 Q4. Consider the searching problem: Input: A sequence of n numbers ha1; a2; : : : ; ani stored in array AŒ1 W n? and a value x. Output: An index i such that x equals AŒi� or the special value NIL if x does not appear in A. Write pseudocode for linear search, which scans through the array from beginning to end, looking for x. Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulûlls the three necessary properties. 
 
 ANSWER:
@@ -540,9 +562,12 @@ an (n + 1)-element array C containing the binary digits of a + b.
 
 
 EXERCISE 2.2
+
 QUESTION : # 01
+
 Q1.Express the function n^3/1000 +100n^2 - 100n +3 in terms of ‚ꙫ-notation. 
 ANSWER:
+
 To express the function f(n) =  n^3/1000+100n^2-100n+3 in terms of  ThetaΘ-notation, we analyze the leading term, which will dominate the growth of the function as nnn becomes large.
 	Identify the leading term: The term n^3/1000 is the highest order term in the polynomial.
 	Ignore lower-order terms: The other terms 100n^2+100n,and 3 grow slower than n^3 for large n.
@@ -554,8 +579,10 @@ f(n) = Θ(n^3)
 This indicates that the function grows cubically with nnn.
 
 QUESTION : # 02
+
 Q2.Consider sorting n numbers stored in array A[1:n] by first finding the smallest element of A[1:n] and exchanging it with the element in A[1]. Then find the smallest element of A[2:n] , and exchange it with A[2]. Then find the smallest element of A[3:n], and exchange it with A[3]. Continue in this manner for the first n -1 elements of A. Write pseudocode for this algorithm, which is known as selection sort. What loop invariant does this algorithm maintain? Why does it need to run for only the first n-1 elements, rather than for all n elements? Give the worst-case running time of selection sort in ‚ꙫ-notation. Is the best-case running time any better?
 ANSWER:
+
 Input: An n-element array A.
 Output: The array A with its elements rearranged into increasing order. 
 The loop invariant of selection sort is as follows:  At each iteration of the for loop of lines 1 through 10, the subarray A[1..i − 1] contains the i − 1 smallest elements of A in increasing order. After n − 1 iterations of the loop, the n − 1 smallest elements of A are in the first n − 1 positions of A in increasing order, so the n th element is necessarily the largest element. Therefore we do not need to run the loop a final time. The best-case and worst-case running times of selection sort are Θ(n 2 ). This is because regardless of how the elements are initially arranged, on the i th iteration of the main for loop the algorithm always inspects each of the remaining n−i elements to find the smallest one remaining. 
@@ -573,8 +600,10 @@ This yields a running time of
 ∑_(i=1)^(n-1)▒〖n-i〗 =n(n – 1) - ∑_(i=1)^(n-1)▒i = n^2 – n -  (n^2-n)⁄2  =  (n^2-n)⁄2 = ꙫ(n^2)
 
 QUESTION : # 03
+
 Q3. Consider linear search again (see Exercise 2.1-4). How many elements of the input array need to be checked on the average, assuming that the element being searched for is equally likely to be any element in the array? How about in the worst case?  ‚ꙫ-notation, give the average-case and worst-case running times of linear search. Justify your answers. 
 ANSWER:
+
 Suppose that every entry has a fixed probability p of being the element looked for. A different interpretation of the question is given at the end of this solution. Then, we will only check k elements if the previous k − 1 positions were not the element being looked for, and the kth position is the desired value. This means that the probabilty that the number of steps taken is k is p(1−p) k . The last possibility is that none of the elements in the array match what we are looking for, in which case we look at all A.length many positions, and it happens with probability (1 − p). 
 By multiplying the number of steps in each case by the probability that that case happens, we get the expected value of: 
 E(steps) = A.length(1 − p)^ A.length + ∑_(k=1)^(A.lenght)▒〖k(1-p)^(k-1)  p〗
@@ -595,14 +624,19 @@ Therefore, since we have bounded above and below by a constant, we get the somew
 A different way of interpreting this statement of this question is that there is exactly one element in the array that is the one you are looking for, and then each position is equally likely to be the one containing that element. In this case, the worst case behavior is unchanged, and the expected runtime is ∑_(i=1)^(A.lenght)▒i/(A.lenght) = (A.lenght+1)/2  .This makes the asymptotics for the expected case Θ(A.length).
 
 QUESTION : # 04
+
 Q4. How can you modify any sorting algorithm to have a good best-case running time?
 ANSWER:
+
 For a good best-case running time, modify an algorithm to first randomly produce output and then check whether or not it satisfies the goal of the algorithm. If so, produce this output and halt. Otherwise, run the algorithm as usual. It is unlikely that this will be successful, but in the best-case the running time will only be as long as it takes to check a solution. For example, we could modify selection sort to first randomly permute the elements of A, then check if they are in sorted order. If they are, output A. Otherwise run selection sort as usual. In the best case, this modified algorithm will have running time Θ(n).
 
 EXERCISE 2.3
+
 QUESTION : # 01
+
 Q1. Using Figure 2.4 as a model, illustrate the operation of merge sort on an array initially containing the sequence (3; 41; 52; 26; 38; 57; 9; 49). 
 ANSWER:
+
 Step 1: Split the Array
 First, we recursively divide the array into two halves until we reach arrays of size 1.
 	Initial array: [3, 41, 52, 26, 38, 57, 9, 40]
@@ -655,8 +689,10 @@ The final sorted array is: 3,9,26,38,40,41,52,57
 That's how merge sort operates on the given array!
 
 QUESTION : # 02
+
 Q2. The test in line 1 of the MERGE-SORT procedure reads “If p ≥r  “rather than “if p≠r “If MERGE-SORT is called with p > r  , then the subarray  A[p : r] is empty. Argue that as long as the initial call of MERGE-SORT( A,1,n) has n ≥ 1, the test  “ if p≠r “ suffices to ensure that no recursive call has p > r. 
 ANSWER:
+
 To understand why the condition "if p ≠ r " suffices to ensure that no recursive call in the MERGE-SORT algorithm has p > r , we can analyze the behavior of the recursive calls made by the MERGE-SORT procedure.
 MERGE-SORT Procedure Overview
 The MERGE-SORT algorithm works by recursively dividing the array into two halves until it reaches base cases where the subarrays have one or no elements. The algorithm generally follows these steps:
@@ -680,8 +716,11 @@ Analysis of Recursive Calls
 Final Note
 Therefore, as long as the initial call to MERGE-SORT(A, 1, n) is valid (with n≥1), the condition "if p≠ r" suffices because it prevents any recursive calls from having p> r. This prevents the algorithm from attempting to sort an empty subarray and guarantees that every subarray processed is valid and well-defined, ensuring the algorithm behaves correctly.
 
+QUESTION : # 03
+
 Q3. State a loop invariant for the while loop of lines 12 - 18 of the MERGE procedure. ≠Show how to use it, along with the while loops of lines 20 - 23 and 24 - 27, to prove that the MERGE procedure is correct. 
 ANSWER:
+
 To establish a loop invariant for the while loop of lines 12-18 of the MERGE procedure, we first need to clarify the general purpose of the MERGE procedure, which is to combine two sorted arrays into a single sorted array. Here’s a typical structure of such a procedure:
 Loop Invariant for Lines 12-18
 Invariant: At the start of each iteration of the while loop from lines 12-18, the subarrays A[p..i] and B[q..j] are both sorted, and all elements from A[p..i] and B[q..j] have been placed into the merged array C[0..k].
@@ -699,12 +738,15 @@ Proving Correctness of the MERGE Procedure
 	Lines 24-27 (Third While Loop for Remaining B):
 	Similarly, if elements remain in B, they are also greater than the last added element in C.
 	This loop adds the remaining elements of B to C, again preserving the sorted order.
+
 QUESTION : # 04
+
 Q4. Use mathematical induction to show that when n ≥  2 is an exact power of 2, the solution of the recurrence 
 T(n) =      2                     if n=2
             2T(n/2) + n        if n>2
 Is T(n) = nlgn.
 ANSWER:
+
 Since n is a power of 2, we may write n = 2^k. If k = 1 , then T(2) = 2 lg(2).Suppose it is true for k , we will show that it is true for k+1.
 T(2^(k+1)) = 2T ( 2^(k+1)/2) + 2^(k+1)
 = 2T (2^k)  + 2^(k+1)
@@ -715,8 +757,10 @@ T(2^(k+1)) = 2T ( 2^(k+1)/2) + 2^(k+1)
 = n lg(n)
 
 QUESTION : # 05
+
 Q5.You can also think of insertion sort as a recursive algorithm. In order to sort A[1 :n], recursively sort the subarray A[1 : n-1] and then insert A[n] into the sorted subarray A[1 : n-1]. Write pseudocode for this recursive version of insertion sort. Give a recurrence for its worst-case running time.
 ANSWER:
+
 Let T(n) denote the running time for insertion sort called on an array of size n. We can express T(n) recursively as 
           T(n)  =       Θ(1)                            if n ≤ c 
                            T(n − 1) + I(n)              otherwise
@@ -756,9 +800,11 @@ Let T(n) denote the running time for insertion sort called on an array of size n
 33: end if
 
 QUESTION : # 06
+
  Q6. Referring back to the searching problem (see Exercise 2.1-4), observe that if the subarray being searched is already sorted, the searching algorithm can check the midpoint of the subarray against v and eliminate half of the subarray from further  consideration. The binary search algorithm repeats this procedure, halving the size of the remaining portion of the subarray each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is ꙫ(lgn).
 ANSWER:
-        The following recursive algorithm gives the desired result when called with a = 1 and b = n. 
+
+ The following recursive algorithm gives the desired result when called with a = 1 and b = n. 
 1: BinSearch(a,b,v) 
 2: if then a > b 
 3: return NIL
@@ -774,13 +820,17 @@ ANSWER:
 Note that the initial call should be BinSearch(1, n, v). Each call results in a constant number of operations plus a call to a problem instance where the quantity b − a falls by at least a factor of two. So, the runtime satisfies the recurrence T(n) = T(n/2) + c. So, T(n) ∈ Θ(lg(n)
 
 QUESTION : # 07
+
  Q7. The while loop of lines 5 - 7 of the INSERTION-SORT procedure in Section 2.1 uses a linear search to scan (backward) through the sorted subarray A[1 : j-1]. What if insertion sort used a binary search  instead of a linear search? Would that improve the overall worst-case running time of insertion sort to ‚ꙫ(nlgn)? 
 ANSWER:
+
 A binary search wouldn’t improve the worst-case running time. Insertion sort has to copy each element greater than key into its neighboring spot in the array. Doing a binary search would tell us how many how many elements need to be copied over, but wouldn’t rid us of the copying needed to be done.
 
 QUESTION : # 08
+
 Q8. Describe an algorithm that, given a set S of n integers and another integer x, determines whether S contains two elements that sum to exactly x. Your algorithm should take ‚ꙫ(nlgn) time in the worst case.
 ANSWER:
+
 We can see that the while loop gets run at most O(n) times, as the quantity j−i starts at n−1 and decreases at each step. Also, since the body only consists of a constant amount of work, all of lines 2-15 takes only O(n) time. So, the runtime is dominated by the time to perform the sort, which is Θ(n lg(n)).
        We will prove correctness by a mutual induction. Let mi,j be the proposition A[i] + A[j] < S and  Mi,j be the proposition  A[i] + A[j] > S.  Note that because the array is sorted, mi,j ⇒ ∀k < j, mi,k, and  Mi,j ⇒ ∀k > i, Mk,j . 
 Our program will obviously only output true in the case that there is a valid i and j. Now, suppose that our program output false, even though there were some i, j that was not considered for which A[i] + A[j] = S. If we have i > j, then swap the two, and the sum will not change, so, assume i ≤ j. we now have two cases: 
@@ -803,11 +853,14 @@ Case 1 ∃k,(i, k) was considered and j < k. In this case, we take the smallest 
 such k. The fact that this is nonzero meant that immediately after considering it, we considered (i+1,k) which means mi,k this means mi,j
       Case 2 ∃k,(k, j) was considered and k < i. In this case, we take the largest such k. The fact that this is nonzero meant that immediately after considering it, we considered (k,j-1) which means Mk,j this means Mi,j
  Note that one of these two cases must be true since the set of considered points separates {(m, m0 ) : m ≤ m0 < n} into at most two regions. If you are in the region that contains (1, 1)(if nonempty) then you are in Case 1. If you are in the region that contains (n, n) (if non-empty) then you are in case 2.
+
 EXERCISE  3.1
 
 QUESTION : # 01
+
 Q1. Modify the lower-bound argument for insertion sort to handle input sizes that are not necessarily a multiple of 3. 
 ANSWER:
+
 To modify the lower-bound argument for insertion sort, we need to analyze the comparison-based sorting algorithm in a way that accounts for input sizes that are not necessarily a multiple of 3.
 Original Lower-Bound Argument
 The classic lower bound for any comparison-based sorting algorithm is Ω(nlogn). This is derived from the decision tree model of sorting, where each comparison can be thought of as a binary decision that splits the input set into two parts. The height of the decision tree represents the worst-case number of comparisons needed to sort the array.
@@ -826,8 +879,10 @@ This simplifies to:
 	Insertion Sort Specifically: While insertion sort operates in O(n^2) in the worst case, it can be shown that for arbitrary n, the lower bound remains valid. For insertion sort, even if nnn is not a multiple of 3, the worst-case scenario still requires making at most n(n−1)/2 comparisons, confirming that insertion sort cannot perform better than Θ(n^2) in the worst case.
 
 QUESTION : # 02
+
 Q2. Using reasoning similar to what we used for insertion sort, analyze the running time of the selection sort algorithm from Exercise 2.2-2. 
 ANSWER:
+
 Running Time Analysis
 	Outer Loop: The outer loop runs n−1 times, where n is the number of elements in the array.
 	Finding the Minimum: For each iteration of the outer loop at position iii:
@@ -849,8 +904,10 @@ O(n^2)
 Selection sort, therefore, has a quadratic time complexity for all cases (best, average, and worst), making it inefficient for large lists compared to more advanced algorithms like quicksort or mergesort.
 
 QUESTION  : # 03
+
 Q3. Suppose that α  is a fraction in the range 0 < α < 1. Show how to generalize the lower-bound argument for insertion sort to consider an input in which the αn largest values start in the first  αn positions. What additional restriction do you need to put on α? What value of α maximizes the number of times that the  αn largest values must pass through each of the middle .(1 – 2α)n array positions?
 ANSWER:
+
 To analyze the lower bound for insertion sort with respect to the given scenario, we need to consider how insertion sort behaves with an input where the largest α n values are already positioned in the first α n slots.
 Generalizing the Lower-Bound Argument
 	Insertion Sort Overview: Insertion sort works by building a sorted portion of the array one element at a time. It takes each new element and inserts it into the correct position in the already sorted portion.
