@@ -1,0 +1,210 @@
+CODE:
+
+print("enter marks obtained in 7 subjects:")
+total1 =44
+total2 =67
+total3 =76
+total4 =99
+total5 =58
+total6 =77
+total7 =90
+
+tot = total1 + total2 + total3 + total4 + total5 + total6 + total7
+avg = tot/7
+
+if avg >= 91 and avg <=100:
+    print("you grade is A1")
+elif avg >= 81 and avg < 91:
+    print("your grade is A2")
+elif avg >= 71 and avg < 81:
+    print("your grade is B1")
+elif avg >= 61 and avg < 71:
+    print("your grade is B2")
+elif avg >= 51 and avg < 61:
+    print("your grade is C1")
+elif avg >=41 and avg < 51:
+    print("your grade id C2")
+elif avg >= 33 and avg < 41:
+    print("your grade is D")
+elif avg >= 21 and avg < 33:
+    print("your grade is E1")
+elif avg >= 0 and avg < 21:
+    print("your grade is E2")
+else:
+    print("invalid input")
+
+#creating a dictionary which consists of students name
+# assignment results,and lab results
+
+# 1. Jack's dictionary
+jack = {"name": "Jack Frost",
+        "assignment": [80, 50, 40, 20],
+        "test": [75, 75],
+        "lab": [78.20, 77.20]
+        }
+ 
+# 2. James's dictionary
+james = {"name": "James Potter",
+         "assignment": [82, 56, 44, 30],
+         "test": [80, 80],
+         "lab": [67.90, 78.72]
+         }
+ 
+# 3. Dylan's dictionary
+dylan = {"name": "Dylan Rhodes",
+         "assignment": [77, 82, 23, 39],
+         "test": [78, 77],
+         "lab": [80, 80]
+         }
+ 
+# 4. Jessica's dictionary
+jess = {"name": "Jessica Stone",
+        "assignment": [67, 55, 77, 21],
+        "test": [40, 50],
+        "lab": [69, 44.56]
+        }
+ 
+# 5. Tom's dictionary
+tom = {"name": "Tom Hanks",
+       "assignment": [29, 89, 60, 56],
+       "test": [65, 56],
+       "lab": [50, 40.6]
+       }
+
+# 6. Jim's dictionary
+jim = {"name":"jim hawaks",
+       "assignment": [15, 62, 85, 90],
+       "test":  [20, 70],
+       "lab": [50.2, 70]
+       }
+# 7. Marth's dictionary
+marth = {"name":"Marth tekken",
+         "assignment": [90, 90, 75, 80],
+         "test": [66, 80],
+         "lab": [76.2, 59.30]
+         }
+ 
+# Function calculates simple average
+ 
+ 
+def get_average(marks):
+    total_sum = sum(marks)
+    total_sum = float(total_sum)
+    return total_sum / len(marks)
+ 
+# Function calculates total average of students
+ 
+ 
+def calculate_total_average(students):
+    assignment = get_average(students["assignment"])
+    test = get_average(students["test"])
+    lab = get_average(students["lab"])
+ 
+    # Return the result based
+    # on weightage supplied
+    # 10 % from assignments
+    # 70 % from test
+    # 20 % from lab-works
+    return (0.1 * assignment +
+            0.7 * test + 0.2 * lab)
+ 
+ 
+# Calculate letter grade of each student
+def assign_letter_grade(score):
+    if score >= 90:
+        return "A+"
+    elif score >= 80:
+        return "A"
+    elif score >= 70:
+        return "B"
+    elif score >= 60:
+        return "C"
+    elif score >= 50:
+        return "D"
+    else:
+        return "E"
+ 
+# Function to calculate the total
+# average marks of the whole class
+ 
+ 
+def class_average_is(student_list):
+    result_list = []
+ 
+    for student in student_list:
+        stud_avg = calculate_total_average(student)
+        result_list.append(stud_avg)
+        return get_average(result_list)
+ 
+ 
+# Student list consisting the
+# dictionary of all students
+students = [jack, james, dylan, jess, tom, jim, marth]
+ 
+# Iterate through the students list
+# and calculate their respective
+# average marks and letter grade
+for i in students:
+    print(i["name"])
+    print("...............................")
+    print("Average marks of students is : %s " % (i["name"],
+                            calculate_total_average(i)))
+ 
+    print("Letter Grade of %s is : %s" % (i["name"],
+             assign_letter_grade(calculate_total_average(i))))
+ 
+    print()
+ 
+ 
+# Calculate the average of whole class
+class_av = class_average_is(students)
+ 
+print("Class Average is %s" % (class_av))
+print("Letter Grade of the class is %s "
+      % (assign_letter_grade(class_av)))
+        
+
+        
+        
+OUTPUT:
+enter marks obtained in 7 subjects:
+your grade is B1
+Jack Frost
+...............................
+Average marks of students Jack Frost is : 72.79 
+Letter Grade of Jack Frost is : B
+
+James Potter
+...............................
+Average marks of students James Potter is : 75.962 
+Letter Grade of James Potter is : B
+
+Dylan Rhodes
+...............................
+Average marks of students Dylan Rhodes is : 75.775 
+Letter Grade of Dylan Rhodes is : B
+
+Jessica Stone
+...............................
+Average marks of students Jessica Stone is : 48.356 
+Letter Grade of Jessica Stone is : E
+
+Tom Hanks
+...............................
+Average marks of students Tom Hanks is : 57.26 
+Letter Grade of Tom Hanks is : D
+
+jim hawaks
+...............................
+Average marks of students jim hawaks is : 49.82 
+Letter Grade of jim hawaks is : E
+
+Marth tekken
+...............................
+Average marks of students Marth tekken is : 73.02499999999999 
+Letter Grade of Marth tekken is : B
+
+Class Average is 72.79
+Letter Grade of the class is B 
+
+        
